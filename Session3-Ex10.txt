@@ -1,0 +1,34 @@
+
+/* Write a code which gets a number and shows whether that is a complete number or not.*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Session3_Ex9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a number:");
+            int num = int.Parse(Console.ReadLine());
+            int sum = 0;
+            for (int i = 1; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    sum += i;
+                }
+            }
+            if (sum == num)
+                Console.WriteLine("This number is a Complete number");
+            else
+                Console.WriteLine("This number is Not a complete number");
+
+            Console.ReadKey();
+        }
+    }
+}
